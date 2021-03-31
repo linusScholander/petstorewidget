@@ -1,0 +1,47 @@
+@use '../../styles/Variables.scss' as *;
+.petstorewidget-filter {
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	&-label {
+		font-family: $font-family-filter-label;
+		font-weight: $font-weight-filter-label;
+		font-size: $font-size-filter-label;
+		line-height: $line-height-filter-label;
+		letter-spacing: $letter-spacing-filter-label;
+		text-transform: $text-transform-filter-label;
+		padding: 0.375em 0.75em;
+		display: block;
+		text-align: center;
+		flex: 0 1 auto;
+		margin: 0;
+	}
+	&-list {
+		display: inline-flex;
+		justify-content: center;
+		flex-flow: row wrap;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		max-width: 100%;
+		border-radius: $border-radius-button;
+		overflow: hidden;
+	}
+	&-item {
+		display: block;
+		padding: 0;
+		margin: 0;
+		flex: 1 1 auto;
+		overflow: hidden;
+	}
+}
+.petstorewidget-large {
+	& .petstorewidget-filter {
+		font-size:1em;
+		margin: 0 0 1.5em 0;
+	}
+}

@@ -1,0 +1,21 @@
+@use '../../styles/Variables.scss' as *;
+@use '../../styles/Mixin.scss' as *;
+.petstorewidget-thead {
+	display: block;
+	font-weight: bolder;
+	color: $color-text-heading;
+	background-color: $color-body;
+	border-bottom: 2px solid $color-shade-2;
+	box-shadow: inset 2px 0 0 0 $color-body, inset -2px 0 0 0 $color-body;
+	overflow: hidden;
+	& .petstorewidget-column {
+		padding-bottom: 0.5em;
+	}
+}
+.petstorewidget-small .petstorewidget-thead {
+	@include screen-reader-only;
+}
+.petstorewidget-large .petstorewidget-thead {
+	position: sticky;
+	top: 0;
+}

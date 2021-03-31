@@ -1,0 +1,27 @@
+@use '../../styles/Variables.scss' as *;
+@use '../../styles/Mixin.scss' as *;
+.petstorewidget-filter-button {
+	@include button-base;
+	@include button-typography;
+	@include button-space;
+	@include button-theme;
+	border-radius: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	&:hover,
+	&:focus {
+		@include button-theme-hover;
+	}
+	&:active {
+		@include button-theme-active;
+	}
+	&-active,
+	&-active:hover,
+	&-active:focus,
+	&-active:active {
+		@include button-theme-status-active;
+	}
+}

@@ -1,0 +1,101 @@
+@use '../../styles/Variables.scss' as *;
+.petstorewidget-table {
+	box-shadow: 0 -2px 0 0 $color-body;
+}
+.petstorewidget-tbody {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	box-shadow: inset 2px 0 0 0 $color-body, inset -2px 0 0 0 $color-body;
+	&-column-key {
+		padding-right: 0.375em;
+		white-space: nowrap;
+		&:after {
+			content: "\003A";
+			display: inline-block;
+			margin-left: -0.187em;
+		}
+	}
+}
+.petstorewidget-row {
+	display: block;
+	padding: 0.75em 0;
+	margin: 0;
+	&:nth-child(even) {
+		background-color: $color-shade-1;
+	}
+}
+.petstorewidget-column {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 20em;
+	max-width: 100%;
+	padding: 0.375em 0.75em;
+	margin: 0 auto;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	&-list {
+		display: block;
+		font-size: 1em;
+		line-height: 1;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+	&-item {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 1em;
+		line-height: 1;
+		padding: 0.187em;
+		margin:0;
+		
+	}
+	&-placeholder {
+		text-align: center;
+	}
+}
+.petstorewidget-tag {
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.875em;
+	line-height: 1;
+	padding: 0.45em 0.75em;
+	margin: 0;
+	border-radius: 1.125em;
+	background-color: $color-tag;
+}
+.petstorewidget-large {
+	& .petstorewidget-tbody {
+		line-height: 1;
+	}
+	& .petstorewidget-row {
+		display: grid;
+		grid-template-columns: 3em repeat(3, 1fr);
+		align-items: stretch;
+		padding: 0;
+		box-shadow: 0 2px 0 0 $color-body;
+		min-height:3em;
+	}
+	& .petstorewidget-column {
+		justify-content: flex-start;
+		box-shadow: -2px 0 0 0 $color-body;
+		text-align: left;
+		width: auto;
+		margin: 0;
+		&:first-child {
+			box-shadow: none;
+		}
+		&-list {
+			text-align: left;
+		}
+	}
+	& .petstorewidget-tbody-first-row .petstorewidget-column{
+		padding-top: 1.25em;
+	}
+}

@@ -1,0 +1,26 @@
+@use './Variables.scss' as *;
+.petstorewidget {
+	width:90rem;
+	max-width: 100%;
+	margin: 0 auto 1.5em auto;
+	background-color: $color-body;
+	box-sizing: border-box;
+	padding: 0.75em 0.75em 3em 0.75em;
+	color:$color-text-body;
+	border-radius:$panel-radius-button;
+}
+.petstorewidget *,
+.petstorewidget *:before,
+.petstorewidget *:after {
+	box-sizing: inherit;
+}
+.petstorewidget-small{
+	& .petstorewidget-filter-label{
+		display:none;
+	}
+}
+@media screen and (max-width:599px){
+	.petstorewidget{
+		border-radius:0;
+	}
+}

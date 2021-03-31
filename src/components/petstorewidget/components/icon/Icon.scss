@@ -1,0 +1,48 @@
+@use '../../styles/Variables.scss' as *;
+.icon-svg {
+	font-size: 1.25em;
+	line-height: 1;
+	display: inline-block;
+	fill: $color-text-invert;
+}
+.available-svg {
+	color: $color-available;
+}
+.pending-svg {
+	color: $color-pending;
+}
+.sold-svg {
+	color: $color-sold;
+}
+.petstorewidget-filter-label-icon {
+	display: inline-block;
+	font-size: 1.25em;
+	line-height: 1;
+	opacity: 0.5;
+}
+.petstorewidget-filter-button {
+	& .icon-svg {
+		color: $color-text-invert;
+		fill: transparent;
+		opacity: 0.7;
+		transition: all 0.12s ease-in;
+	}
+	&:hover .icon-svg,
+	&:active .icon-svg,
+	&:focus .icon-svg {
+		opacity: 1;
+	}
+	&-icon {
+		margin-right: 0.187em;
+	}
+}
+.petstorewidget-tbody-column-icon {
+	font-size: 2.5em;
+	margin: 0.25em auto;
+}
+.petstorewidget-large {
+	.petstorewidget-tbody-column-icon {
+		font-size: 1.25em;
+		margin: 0 auto;
+	}
+}
